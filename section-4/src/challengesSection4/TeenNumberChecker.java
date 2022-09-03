@@ -1,0 +1,40 @@
+public class TeenNumberChecker {
+
+    public static void main(String[] args) {
+        
+        hasTeen(9, 99, 19);  // should return true since 19 is in range 13 - 19
+
+        hasTeen(23, 15, 42);  // should return true since 15 is in range 13 - 19
+        
+        hasTeen(22, 23, 34);  // should return false since numbers 22, 23, 34 are not in range 13-19
+
+    };
+
+    public static boolean hasTeen(int hasTeenNumberOne, int hasTeenNumberTwo, int hasTeenNumberThree) {
+
+        if (isTeen(hasTeenNumberOne) == true || isTeen(hasTeenNumberTwo) == true || isTeen(hasTeenNumberThree) == true) {
+
+            System.out.println("hasTeen, true");
+            return true;
+
+        };
+
+        System.out.println("hasTeen false");
+        return false;
+
+    };
+
+
+    public static boolean isTeen(int teenNumber) {
+
+        if ( teenNumber >= 13 && teenNumber <= 19) {
+
+           return true;
+
+        };
+
+        return false;
+
+    };
+    
+};
